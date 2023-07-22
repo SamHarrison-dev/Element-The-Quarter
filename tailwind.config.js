@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{vue,js,ts,tsx.jsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'freight': ['freight-big-pro', 'san-serif'],
+        'poppins': ['poppins', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

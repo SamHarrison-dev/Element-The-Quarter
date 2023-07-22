@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@100;200&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'freight-big-pro';
+  font-style: normal;
+  font-display: auto;
+  font-weight: 300;
+  src: url(https://use.typekit.net/af/3021a6/000000000000000077359fa3/30/d?subset_id=2&fvd=n3&v=3) format("woff"),
+    url(https://use.typekit.net/af/3021a6/000000000000000077359fa3/30/l?subset_id=2&fvd=n3&v=3) format("woff2")
+}
+
+
+@font-face {
+  font-family: 'freight-big-pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url(https://use.typekit.net/af/a91824/000000000000000077359f9d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),
+    url(https://use.typekit.net/af/a91824/000000000000000077359f9d/30/d?subset_id=2&fvd=n4&v=3) format("woff")
+}
+
+@font-face {
+  font-family: 'freight-big-pro';
+  font-weight: 300;
+  font-style: italic;
+  font-display: auto;
+  src: url(https://use.typekit.net/af/7e2d6c/000000000000000077359fa6/30/l?subset_id=2&fvd=i3&v=3) format("woff2"),
+    url(https://use.typekit.net/af/7e2d6c/000000000000000077359fa6/30/d?subset_id=2&fvd=i3&v=3) format("woff")
+}
+
+
+@font-face {
+  font-family: 'freight-big-pro';
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: url(https://use.typekit.net/af/650441/000000000000000077359f96/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),
+    url(https://use.typekit.net/af/650441/000000000000000077359f96/30/d?subset_id=2&fvd=n7&v=3) format("woff")
+}
+
+
+@font-face {
+  font-family: 'freight-big-pro';
+  font-weight: 700;
+  font-style: italic;
+  font-display: auto;
+  src: url(https://use.typekit.net/af/e5e434/000000000000000077359f99/30/l?subset_id=2&fvd=i7&v=3) format("woff2"),
+    url(https://use.typekit.net/af/e5e434/000000000000000077359f99/30/d?subset_id=2&fvd=i7&v=3) format("woff")
+}
+
+
+/* @font-face{font-family:europa;src:url(https://use.typekit.net/af/821a05/00000000000000007735a082/30/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/821a05/00000000000000007735a082/30/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/821a05/00000000000000007735a082/30/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}
+
+@font-face{font-family:europa;src:url(https://use.typekit.net/af/ebcd51/00000000000000007735a081/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/ebcd51/00000000000000007735a081/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/ebcd51/00000000000000007735a081/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}
+
+@font-face{font-family:europa;src:url(https://use.typekit.net/af/d08711/00000000000000007735a08a/30/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/d08711/00000000000000007735a08a/30/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/d08711/00000000000000007735a08a/30/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:europa;src:url(https://use.typekit.net/af/2a1b80/00000000000000007735a09e/30/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/2a1b80/00000000000000007735a09e/30/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/2a1b80/00000000000000007735a09e/30/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;} */
