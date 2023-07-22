@@ -86,7 +86,7 @@ onMounted(() => {
                     ref="carousel" tabindex="0">
                     <div v-for="(image, index) in images" :key="index" :style="`width: ${width}px; height: ${width}px`"
                         class="snap-center">
-                        <img :src="image" class="object-cover w-full h-full" />
+                        <img :src="image" class="object-cover w-full h-full rounded-lg" />
                     </div>
                 </div>
                 <button v-if="scrollable && !touchable" type="button" aria-label="Toggle next image"
