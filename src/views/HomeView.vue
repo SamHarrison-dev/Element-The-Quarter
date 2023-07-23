@@ -88,7 +88,7 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
         </div>
 
         <div class="container mx-auto">
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 md:gap-6 gap-8">
                 <div class="flex justify-center items-center flex-col gap-4">
                     <h2 class="font-freight text-[36px]">Location</h2>
                     <ul class="font-poppins text-[18px] flex flex-col gap-2">
