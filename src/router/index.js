@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/HomeView.vue'
-import Studio from '../views/StudioView.vue'
-import Cluster from '../views/ClusterView.vue'
+import About from '../views/AboutView.vue'
+import Faq from '../views/FaqView.vue'
 import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
@@ -12,14 +12,14 @@ const router = createRouter({
         component: Home
     },
     {
-        path: '/studio',
-        name: 'Studio',
-        component: Studio
+        path: '/about',
+        name: 'About',
+        component: About
     },
     {
-        path: '/cluster',
-        name: 'Cluster',
-        component: Cluster
+        path: '/faq',
+        name: 'Frequently Asked Questions',
+        component: Faq
     },
     {
         path: '/:catchAll(.*)',

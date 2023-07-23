@@ -2,5 +2,5 @@
 </script>
 
 <template>
-    <h1>Studio 'Page'</h1>
+    <h1>FAQ page</h1>
 </template>
