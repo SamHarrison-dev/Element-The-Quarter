@@ -88,8 +88,7 @@ onMounted(() => {
         <div ref="mainImage" class="relative">
             <div>
                 <button v-if="scrollable && !touchable" type="button" aria-label="Toggle previous image"
-                    class="absolute left-2 top-1/2 flex -translate-y-1/2 border bg-white transition"
-                    @click.prevent="changeImage(-1)">
+                    class="absolute left-2 top-1/2 flex -translate-y-1/2 transition" @click.prevent="changeImage(-1)">
                     <img src="/icons/chevron-left.svg" class="inline h-8 w-8" :aria-hidden="true" />
                 </button>
                 <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden"
@@ -100,8 +99,7 @@ onMounted(() => {
                     </div>
                 </div>
                 <button v-if="scrollable && !touchable" type="button" aria-label="Toggle next image"
-                    class="absolute right-2 top-1/2 flex -translate-y-1/2 border bg-white transition"
-                    @click.prevent="changeImage(1)">
+                    class="absolute right-2 top-1/2 flex -translate-y-1/2 transition" @click.prevent="changeImage(1)">
                     <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
                 </button>
             </div>

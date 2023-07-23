@@ -15,4 +15,8 @@ import Header from './components/Header.vue'
   </footer>
 </template>
 
-
+<style>
+html {
+  scroll-behavior: smooth
+}
+</style>

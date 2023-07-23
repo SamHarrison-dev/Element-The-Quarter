@@ -6,21 +6,19 @@ const isMenuOpen = ref(false)
 </script>
 
 <template>
-    <header class="md:sticky md:top-0 w-full bg-black text-white z-50 px-4 md:px-0">
+    <header class="md:sticky md:top-0 w-full bg-[#050A30] text-white z-50 px-4 md:px-0">
         <div class="grid grid-cols-2 container mx-auto py-4 items-center">
             <div>
                 <a href='/' aria-label="return to home page">
                     <img src="/leglogo.svg" width="100" height="100" alt="Legacie logo" class="w-[100px] h-[50px]" />
                 </a>
             </div>
-            <nav class="justify-end gap-6 font-poppins hidden md:flex">
-                <a class="hover:underline hover:cursor-pointer p-1" href="/studio" aria-label="Go to Studio room">Studio</a>
-                <a class="hover:underline hover:cursor-pointer p-1" href="/cluster"
-                    aria-label="Go to Cluster room">Cluster</a>
+            <nav class="justify-end gap-6 font-poppins font-extralight hidden md:flex">
+                <a class="hover:underline hover:cursor-pointer p-1" href="/about" aria-label="Go to About page">Discover</a>
+                <a class="hover:underline hover:cursor-pointer p-1" href="/faq"
+                    aria-label="Go to Frequently Asked Questions page">FAQ</a>
                 <a class="md:block border rounded-full hover:underline hover:cursor-pointer py-1 px-4 hidden"
                     href="#footer">Contact</a>
-                <a class="md:hidden border rounded-full hover:underline hover:cursor-pointer py-1 px-4 block"
-                    href="tel:01512079990">Contact</a>
             </nav>
             <nav class="flex md:hidden justify-end cursor-pointer relative text-white">
                 <div id="mobile-menu" :class="isMenuOpen ? 'open' : null" @click="isMenuOpen = !isMenuOpen">
@@ -30,7 +28,17 @@ const isMenuOpen = ref(false)
                 </div>
             </nav>
         </div>
-        <div v-if="isMenuOpen" class="md:hidden flex justify-end">Some menu items</div>
+        <div v-if="isMenuOpen" class="md:hidden flex justify-end">
+            <nav>
+                <ul class="flex gap-4 font-poppins">
+                    <li class="focus:underline active:underline"><a href="/about" aria-label="Go to About page">Discover</a>
+                    </li>
+                    <li class="focus:underline active:underline"><a href="/faq"
+                            aria-label="Go to Frequently Asked Questions page">FAQ</a></li>
+                    <li class="focus:underline active:underline"><a href="tel:01512079990">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 </template>

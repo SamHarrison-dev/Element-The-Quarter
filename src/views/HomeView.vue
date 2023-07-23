@@ -1,8 +1,8 @@
 <script setup>
 import ImageCarousel from '../components/ImageCarousel.vue'
 
-const studioImages = ['/studio/StudioKitchen.jpg', '/studio/StudioArea.jpg', '/studio/StudioBathroom.jpg', '/studio/StudioBathroom2.jpg', '/studio/StudioBed.jpg', '/studio/StudioDesk.jpg', '/studio/StudioSofa.jpg']
-const clusterImages = ['/cluster/ClusterBed.jpg', '/cluster/ClusterBed2.jpg', '/cluster/ClusterDesk.jpg', '/cluster/ClusterKitchen.jpg']
+const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/studio/DSC04700.jpg', '/studio/DSC04712.jpg', '/studio/DSC04717.jpg', '/studio/DSC04742.jpg']
+const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
 
 </script>
 
@@ -12,8 +12,18 @@ const clusterImages = ['/cluster/ClusterBed.jpg', '/cluster/ClusterBed2.jpg', '/
             <picture>
                 <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
                 <img src="/hero/banner-sm.jpg"
-                    class="w-full h-full min-h-[350px] md:aspect-[16/6] md:object-auto aspect-[16/10]" />
+                    class="w-full h-full min-h-[350px] md:aspect-[16/6] block md:object-auto aspect-[16/10]" />
             </picture>
+        </div>
+
+        <div>
+            <div class="container mx-auto">
+                <h1 class="font-freight text-[48px] italic text-center">Element The Quarter</h1>
+                <p class="font-freight text-[42px] text-center mt-1 italic">Liverpools newest student accomodation</p>
+
+
+
+            </div>
         </div>
 
         <div class="flex flex-col gap-8">
@@ -35,6 +45,16 @@ const clusterImages = ['/cluster/ClusterBed.jpg', '/cluster/ClusterBed2.jpg', '/
                 </div>
                 <div>
                     <ImageCarousel :images="clusterImages" />
+                </div>
+            </div>
+            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
+                <div class="order-2 sm:order-1">
+                    <ImageCarousel :images="studioImages" />
+                </div>
+                <div class="flex flex-col gap-4 justify-center items-center order-1 sm:order-2">
+                    <h2 class="text-[36px] font-freight">Facilities</h2>
+                    <p>Text about the facilities</p>
+                    <button>Discover More</button>
                 </div>
             </div>
         </div>
@@ -64,6 +84,30 @@ const clusterImages = ['/cluster/ClusterBed.jpg', '/cluster/ClusterBed2.jpg', '/
                         the city"</p>
                     <span class="text-right">- Olivia Cox</span>
                 </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="flex justify-center items-center flex-col gap-4">
+                    <h2 class="font-freight text-[36px]">Location</h2>
+                    <ul class="font-poppins text-[18px] flex flex-col gap-2">
+                        <li class="flex gap-2"><img src="/icons/graduation.svg" height="24" width="24" />Ideal location for
+                            University buildings</li>
+                        <li class="flex gap-2"><img src="/icons/city.svg" height="24" width="24" />City Center location
+                        </li>
+                        <li class="flex gap-2"><img src="/icons/train.svg" height="24" width="24" />Walking distance to
+                            Liverpool Lime Street station</li>
+                        <li class="flex gap-2"><img src="/icons/shopping-cart.svg" height="24" width="24" />Less than 10
+                            minutes to Tesco &amp; Lidl</li>
+                        <li class="flex gap-2"><img src="/icons/hospital.svg" height="24" width="24" />7 minute walk to
+                            Royal Liverpool University Hospital</li>
+                    </ul>
+                </div>
+                <iframe class="rounded-lg shadow"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.0670073078822!2d-2.9651933228248524!3d53.41362776968672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21e393e1b963%3A0x7ef05b0c42a706a0!2sElement%20The%20Quarter!5e0!3m2!1sen!2suk!4v1690121352280!5m2!1sen!2suk"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
