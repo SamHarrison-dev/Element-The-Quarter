@@ -33,7 +33,7 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
             </div>
             <div class="bg-[#d9e3da] py-12 md:py-20">
                 <div class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
-                    <div class="text-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
+                    <div class="font-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
                         <p>Welcome to our brand-new student accommodation building, located at the heart of the
                             vibrant city center!
                             Designed with the needs of modern students in mind, our prime location puts you within easy
