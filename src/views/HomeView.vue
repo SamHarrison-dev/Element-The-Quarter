@@ -4,25 +4,55 @@ import ImageCarousel from '../components/ImageCarousel.vue'
 const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/studio/DSC04700.jpg', '/studio/DSC04712.jpg', '/studio/DSC04717.jpg', '/studio/DSC04742.jpg']
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
 
+
 </script>
 
 <template>
-    <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-16">
         <div class="w-full">
-            <picture>
-                <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
-                <img src="/hero/banner-sm.jpg"
-                    class="w-full h-full min-h-[350px] md:aspect-[16/6] block md:object-auto aspect-[16/10]" />
-            </picture>
-        </div>
+            <div class="relative flex justify-center">
+                <picture class="w-full">
+                    <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
+                    <img src="/hero/banner-sm.jpg"
+                        class="w-full h-full min-h-[350px] md:aspect-[14/6] block md:object-auto aspect-[12/10] brightness-50" />
+                </picture>
+                <div class="absolute text-white top-0 flex flex-col w-auto h-full justify-center px-4 md:px-0">
+                    <h1 id="title"
+                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
+                        Element The
+                        Quarter
+                    </h1>
+                    <hr id="title-divide" class="border border-[#fff]" />
+                    <h2 id="subtitle"
+                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
+                        Liverpools
+                        newest
+                        student
+                        accomodation</h2>
+                </div>
+            </div>
+            <div class="bg-[#d9e3da] py-12 md:py-20">
+                <div class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
+                    <div class="text-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
+                        <p>Welcome to our brand-new student accommodation building, located at the heart of the
+                            vibrant city center!
+                            Designed with the needs of modern students in mind, our prime location puts you within easy
+                            reach of
+                            univesity buildings, libraries, and all the excitement the city has to offer. </p>
+                        <p>
+                            Say goodbye to long
+                            commutes and
+                            hello to convenience and connectivity. Not only will you be immersed in the bustling urban
+                            atmosphere,
+                            but you'll also enjoy the advantage of having our very own on-site gym, promoting a healthy and
+                            active
+                            lifestyle. Embrace a dynamic living experience where academic excellence meets urban living, as
+                            we
+                            provide a comfortable, secure, and inspiring environment for you to thrive.
+                        </p>
 
-        <div>
-            <div class="container mx-auto">
-                <h1 class="font-freight text-[48px] italic text-center">Element The Quarter</h1>
-                <p class="font-freight text-[42px] text-center mt-1 italic">Liverpools newest student accomodation</p>
-
-
-
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -31,10 +61,19 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                 <div class="order-2 sm:order-1">
                     <ImageCarousel :images="studioImages" />
                 </div>
-                <div class="flex flex-col gap-4 justify-center items-center order-1 sm:order-2">
-                    <h2 class="text-[36px] font-freight">Studio</h2>
+                <div class="flex flex-col gap-3 justify-center items-center order-1 sm:order-2 font-poppins">
+                    <div>
+                        <h2 class="text-[36px] font-freight text-center">Studio</h2>
+                        <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
+
+                    </div>
                     <p>Text about the studio</p>
-                    <button>Discover More</button>
+                    <a class="md:hidden flex" href="tel:+44(0)1512079990">
+                        <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
+                            now</button></a>
+                    <a class="hidden md:flex" href="#contact">
+                        <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
+                            now</button></a>
                 </div>
             </div>
             <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
@@ -58,37 +97,40 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                 </div>
             </div>
         </div>
-        <div class="container mx-auto px-4">
-            <div class="md:flex md:justify-evenly grid sm:grid-cols-2 gap-10 xl:w-2/3 mx-auto font-freight">
-                <div class="border rounded-lg p-8 shadow md:w-3/5 flex flex-col gap-4">
-                    <p class="font-freight italic text-[32px] tracking-wide">"The facilities are second to none, one of the
-                        best
-                        places to
-                        live in
-                        the city"</p>
-                    <span class="text-right">- John Doe</span>
-                </div>
-                <div class="border rounded-lg p-8 shadow md:w-3/5 flex flex-col gap-4">
-                    <p class="italic text-[32px] tracking-wide">"The facilities are second to none, one of the
-                        best
-                        places to
-                        live in
-                        the city"</p>
-                    <span class="text-right">- Sam Harrison</span>
-                </div>
-                <div class="border rounded-lg p-8 shadow md:w-3/5 flex flex-col gap-4">
-                    <p class="font-freight italic text-[32px] tracking-wide">"The facilities are second to none, one of the
-                        best
-                        places to
-                        live in
-                        the city"</p>
-                    <span class="text-right">- Olivia Cox</span>
+        <div class="w-full md:py-20 py-12 bg-[#d9e3da]">
+            <div class="container mx-auto px-6">
+                <div
+                    class="md:flex md:justify-evenly grid sm:grid-cols-2 gap-10 xl:w-3/4 mx-auto font-freight text-[24px] italic tracking-wide lg:text-[32px]">
+                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                        <p>The facilities are second to none, one of the
+                            best
+                            places to
+                            live in
+                            the city"</p>
+                        <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- John Doe</span>
+                    </div>
+                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                        <p>"The facilities are second to none, one of the
+                            best
+                            places to
+                            live in
+                            the city"</p>
+                        <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- Sam Harrison</span>
+                    </div>
+                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                        <p>"The facilities are second to none, one of the
+                            best
+                            places to
+                            live in
+                            the city"</p>
+                        <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- Olivia Cox</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container mx-auto">
-            <div class="grid md:grid-cols-2 md:gap-6 gap-8">
+        <div class="container mx-auto mb-16">
+            <div class="grid md:grid-cols-2 md:gap-6 gap-8 px-6">
                 <div class="flex justify-center items-center flex-col gap-4">
                     <h2 class="font-freight text-[36px]">Location</h2>
                     <ul class="font-poppins text-[18px] flex flex-col gap-2">
@@ -114,3 +156,41 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
 </template>
 
 
+<style scoped>
+#title {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: shiftDownAnimation 1s forwards;
+}
+
+#subtitle {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: shiftUpAnimation 1s forwards;
+}
+
+#title-divide {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes shiftDownAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shiftUpAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+</style>

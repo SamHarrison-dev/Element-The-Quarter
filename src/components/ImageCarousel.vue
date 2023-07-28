@@ -94,7 +94,7 @@ onMounted(() => {
                 <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden"
                     ref="carousel" :ref="container.ref" tabindex="0">
                     <div v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
-                        :style="`width: ${width}px; height: ${width}px`" class="snap-center">
+                        :style="`width: ${width}px; height: ${width}px`" class="snap-center px-4 sm:px-0">
                         <img :src="image" class="object-cover w-full h-full rounded-lg" />
                     </div>
                 </div>

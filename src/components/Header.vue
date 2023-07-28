@@ -6,7 +6,7 @@ const isMenuOpen = ref(false)
 </script>
 
 <template>
-    <header class="md:sticky md:top-0 w-full bg-[#050A30] text-white z-50 px-4 md:px-0">
+    <header class="md:sticky md:top-0 w-full bg-[#050A30] text-white z-50 px-6 md:px-0">
         <div class="grid grid-cols-2 container mx-auto py-4 items-center">
             <div>
                 <a href='/' aria-label="return to home page">
@@ -18,7 +18,7 @@ const isMenuOpen = ref(false)
                 <a class="hover:underline hover:cursor-pointer p-1" href="/faq"
                     aria-label="Go to Frequently Asked Questions page">FAQ</a>
                 <a class="md:block border rounded-full hover:underline hover:cursor-pointer py-1 px-4 hidden"
-                    href="#footer">Contact</a>
+                    href="#contact">Contact</a>
             </nav>
             <nav class="flex md:hidden justify-end cursor-pointer relative text-white">
                 <div id="mobile-menu" :class="isMenuOpen ? 'open' : null" @click="isMenuOpen = !isMenuOpen">
