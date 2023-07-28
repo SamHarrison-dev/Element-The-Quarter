@@ -14,8 +14,44 @@ import Footer from './components/Footer.vue'
   <Footer />
 </template>
 
-<style>
+<style global>
 html {
   scroll-behavior: smooth
+}
+
+#title {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: shiftDownAnimation 1s forwards;
+}
+
+#subtitle {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: shiftUpAnimation 1s forwards;
+}
+
+#title-divide {
+  animation: slideInAnimation 2s forwards;
+}
+
+@keyframes slideInAnimation {
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shiftDownAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shiftUpAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>

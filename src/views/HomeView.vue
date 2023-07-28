@@ -5,16 +5,18 @@ const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/stud
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
 
 
+
+
 </script>
 
 <template>
     <div class="flex flex-col gap-16">
         <div class="w-full">
-            <div class="relative flex justify-center">
+            <figure class="relative flex justify-center overflow-x-auto">
                 <picture class="w-full">
                     <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
                     <img src="/hero/banner-sm.jpg"
-                        class="w-full h-full min-h-[350px] md:aspect-[14/6] block md:object-auto aspect-[12/10] brightness-50" />
+                        class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                 </picture>
                 <div class="absolute text-white top-0 flex flex-col w-auto h-full justify-center px-4 md:px-0">
                     <h1 id="title"
@@ -22,7 +24,7 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                         Element The
                         Quarter
                     </h1>
-                    <hr id="title-divide" class="border border-[#fff]" />
+                    <hr id="title-divide" class="border border-[#fff] translate-x-full" />
                     <h2 id="subtitle"
                         class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
                         Liverpools
@@ -30,8 +32,8 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                         student
                         accomodation</h2>
                 </div>
-            </div>
-            <div class="bg-[#d9e3da] py-12 md:py-20">
+            </figure>
+            <article class="bg-[#d9e3da] py-12 md:py-20">
                 <div class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
                     <div class="font-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
                         <p>Welcome to our brand-new student accommodation building, located at the heart of the
@@ -53,11 +55,11 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
 
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
 
-        <div class="flex flex-col gap-8">
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
+        <section class="flex flex-col gap-8">
+            <article class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
                 <div class="order-2 sm:order-1">
                     <ImageCarousel :images="studioImages" />
                 </div>
@@ -75,8 +77,8 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                         <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
                             now</button></a>
                 </div>
-            </div>
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
+            </article>
+            <article class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
                 <div class="flex flex-col gap-4 justify-center items-center">
                     <h2 class="text-[36px] font-freight">Cluster</h2>
                     <p>Text about the cluster</p>
@@ -85,8 +87,8 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                 <div>
                     <ImageCarousel :images="clusterImages" />
                 </div>
-            </div>
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
+            </article>
+            <article class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
                 <div class="order-2 sm:order-1">
                     <ImageCarousel :images="studioImages" />
                 </div>
@@ -95,41 +97,41 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                     <p>Text about the facilities</p>
                     <button>Discover More</button>
                 </div>
-            </div>
-        </div>
-        <div class="w-full md:py-20 py-12 bg-[#d9e3da]">
+            </article>
+        </section>
+        <section class="w-full md:py-20 py-12 bg-[#d9e3da]">
             <div class="container mx-auto px-6">
                 <div
                     class="md:flex md:justify-evenly grid sm:grid-cols-2 gap-10 xl:w-3/4 mx-auto font-freight text-[24px] italic tracking-wide lg:text-[32px]">
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <p>The facilities are second to none, one of the
+                        <q>The facilities are second to none, one of the
                             best
                             places to
                             live in
-                            the city"</p>
+                            the city</q>
                         <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- John Doe</span>
                     </div>
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <p>"The facilities are second to none, one of the
+                        <q>The facilities are second to none, one of the
                             best
                             places to
                             live in
-                            the city"</p>
+                            the city</q>
                         <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- Sam Harrison</span>
                     </div>
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <p>"The facilities are second to none, one of the
+                        <q>The facilities are second to none, one of the
                             best
                             places to
                             live in
-                            the city"</p>
+                            the city</q>
                         <span class="text-right font-poppins text-[14px] not-italic tracking-normal">- Olivia Cox</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container mx-auto mb-16">
+        <section class="container mx-auto mb-16">
             <div class="grid md:grid-cols-2 md:gap-6 gap-8 px-6">
                 <div class="flex justify-center items-center flex-col gap-4">
                     <h2 class="font-freight text-[36px]">Location</h2>
@@ -151,46 +153,7 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
-
-<style scoped>
-#title {
-    opacity: 0;
-    transform: translateY(-40px);
-    animation: shiftDownAnimation 1s forwards;
-}
-
-#subtitle {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: shiftUpAnimation 1s forwards;
-}
-
-#title-divide {
-    opacity: 0;
-    animation: fadeInAnimation 2s forwards;
-}
-
-@keyframes fadeInAnimation {
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes shiftDownAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes shiftUpAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-</style>

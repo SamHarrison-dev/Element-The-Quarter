@@ -29,12 +29,12 @@
                     <h3 class="font-freight underline underline-offset-4 text-[28px]">Connect</h3>
                     <div class="flex gap-4">
                         <figure class="bg-white rounded-full p-2 hover:cursor-pointer hover:outline hover:outline-2">
-                            <a href="https://www.twitter.com">
+                            <a href="https://www.twitter.com" target="_blank">
                                 <img src="/icons/twitter.svg" height="24" width="24" />
                             </a>
                         </figure>
                         <figure class="bg-white rounded-full p-2 hover:cursor-pointer hover:outline hover:outline-2">
-                            <a href="https://www.instagram.com">
+                            <a href="https://www.instagram.com" target="_blank">
                                 <img src="/icons/instagram.svg" height="24" width="24" />
                             </a>
                         </figure>
