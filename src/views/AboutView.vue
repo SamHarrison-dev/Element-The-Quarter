@@ -107,7 +107,7 @@ onMounted(() => {
 
             </div>
             <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
-                ref="carousel" :ref="container.ref" tabindex="0">
+                ref="carousel" :ref="container.ref">
                 <figure v-for="(image, index) in images" :ref="items.getRef(index)"
                     :style="`width: ${width}px; height: ${height}px`" class="snap-center">
                     <picture>
@@ -116,7 +116,8 @@ onMounted(() => {
                         <source media="(min-width: 768px)" :srcset="`${image}?format=992w`" />
                         <source media="(min-width: 576px)" :srcset="`${image}?format=768w`" />
                         <img :src="`${image}?format=576w`"
-                            class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
+                            class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50"
+                            :alt="`Element The Quarter - image ${index + 1}`" />
                     </picture>
                 </figure>
             </div>
