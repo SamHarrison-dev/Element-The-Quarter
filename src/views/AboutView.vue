@@ -102,7 +102,7 @@ onMounted(() => {
                     <source media="(min-width: 768px)" :srcset="`${image}?format=992w`" />
                     <source media="(min-width: 576px)" :srcset="`${image}?format=768w`" />
                     <img :src="`${image}?format=576w`"
-                        class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
+                        class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                 </picture>
             </figure>
             <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
