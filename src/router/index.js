@@ -25,7 +25,15 @@ const router = createRouter({
         path: '/:catchAll(.*)',
         name: '404',
         component: NotFound
-    }]
+    },
+    {
+        path: '/robots.txt',
+        name: 'RobotsTxt',
+        component: () => '',
+        meta: {
+            robotsTxt: true
+        }
+    },]
 })
 
 export default router
