@@ -12,10 +12,14 @@ const mainImageIndex = ref(0)
 const width = ref(0)
 const height = ref(0)
 const nextButton = ref(null)
+const scrollable = ref(false)
+const touchable = ref(false)
 
 function setScrollTouch() {
     width.value = mainImage.value.clientWidth;
     height.value = mainImage.value.outerHeight;
+    scrollable.value = images?.length > 1;
+    touchable.value = touchEnable();
 }
 
 function setMainIndex(index) {
@@ -41,6 +45,12 @@ function changeImage(index) {
         top: 0,
         left: scrollCoordinate
     })
+}
+
+function touchEnable() {
+    return (
+        'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
+    )
 }
 
 watch(() => images, (newVal, oldVal) => {
@@ -82,10 +92,10 @@ onMounted(() => {
 
 <template>
     <div ref="mainImage" class="relative">
-        <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden"
+        <div class="carousel no-scrollbar grid min-w-full auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
             ref="carousel" :ref="container.ref" tabindex="0">
             <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
-                :style="`width: ${width}px; height: ${height}px`" class="snap-center">
+                :style="`width: ${width}px; height: ${height}px`">
                 <picture>
                     <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
                     <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
@@ -95,8 +105,7 @@ onMounted(() => {
                         class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                 </picture>
             </figure>
-            <div
-                class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center px-4 md:px-0">
+            <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
                 <h1 id="title"
                     class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
                     Element The
