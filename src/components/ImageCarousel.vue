@@ -68,9 +68,11 @@ onMounted(() => {
 
     let observer = new IntersectionObserver(entries => {
         const intersectingEntry = entries.find((entry) => entry.isIntersecting)
-        const { target } = intersectingEntry
-        const index = items.elements.value.findIndex((el) => el.isSameNode(target))
-        mainImageIndex.value = index
+        if (intersectingEntry) {
+            const { target } = intersectingEntry
+            const index = items.elements.value.findIndex((el) => el.isSameNode(target))
+            mainImageIndex.value = index
+        }
 
     }, {
         threshold: 1,
