@@ -83,7 +83,6 @@ onMounted(() => {
 
     setInterval(() => {
         nextButton.value.click()
-        console.log("clicked")
     }, 10000)
 
 
@@ -92,10 +91,10 @@ onMounted(() => {
 
 <template>
     <div ref="mainImage" class="relative">
-        <div class="carousel no-scrollbar grid min-w-full auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
+        <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
             ref="carousel" :ref="container.ref" tabindex="0">
             <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
-                :style="`width: ${width}px; height: ${height}px`">
+                :style="`width: ${width}px; height: ${height}px`" class="snap-center">
                 <picture>
                     <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
                     <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
