@@ -1,4 +1,15 @@
 <script setup>
+import { useHead } from '@vueuse/head';
+
+useHead({
+    title: 'Element The Quarter | Frequently Asked Questions',
+    meta: [
+        {
+            name: 'description',
+            content: 'Discover The Element Quarter - Luxury student accommodation at the heart of Liverpool\'s city center. Limited rooms available for clearing today!'
+        }
+    ]
+})
 </script>
 
 <template>

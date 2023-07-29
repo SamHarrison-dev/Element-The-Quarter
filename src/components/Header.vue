@@ -2,6 +2,14 @@
 import { ref } from 'vue'
 
 const isMenuOpen = ref(false)
+const hamburger = ref(null)
+
+const openMenu = () => {
+    console.log("clicked")
+    isMenuOpen.value = !isMenuOpen.value
+    isMenuOpen.value ? hamburger.value.setAttribute('aria-expanded', 'true') : hamburger.value.setAttribute('aria-expanded', 'false')
+
+}
 
 </script>
 
@@ -27,11 +35,12 @@ const isMenuOpen = ref(false)
                 </ul>
             </nav>
             <nav class="flex md:hidden justify-end cursor-pointer relative text-white">
-                <div id="mobile-menu" :class="isMenuOpen ? 'open' : null" @click="isMenuOpen = !isMenuOpen">
+                <button id="mobile-menu" ref="hamburger" :class="isMenuOpen ? 'open' : null" @click="openMenu"
+                    aria-expanded="false">
                     <span class="top-0"></span>
                     <span class="top-[10px]"></span>
                     <span class="top-[20px]"></span>
-                </div>
+                </button>
             </nav>
         </div>
         <div v-if="isMenuOpen" class="md:hidden flex justify-end">
@@ -41,7 +50,8 @@ const isMenuOpen = ref(false)
                     </li>
                     <li class="focus:underline active:underline"><a href="/faq"
                             aria-label="Go to Frequently Asked Questions page">FAQ</a></li>
-                    <li class="focus:underline active:underline"><a href="tel:01512079990">Contact</a></li>
+                    <li class="focus:underline active:underline"><a href="tel:01512079990"
+                            aria-label="Call Element The Quarter">Contact</a></li>
                 </ul>
             </nav>
         </div>

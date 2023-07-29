@@ -1,9 +1,19 @@
 <script setup>
+import { useHead } from '@vueuse/head';
 import ImageCarousel from '../components/ImageCarousel.vue'
 
 const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/studio/DSC04700.jpg', '/studio/DSC04712.jpg', '/studio/DSC04717.jpg', '/studio/DSC04742.jpg']
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
 
+useHead({
+    title: 'Element The Quarter | Reserve your new luxury student accomodation in Liverpool city center',
+    meta: [
+        {
+            name: 'description',
+            content: 'Discover The Element Quarter - Luxury student accommodation at the heart of Liverpool\'s city center. Limited rooms available for clearing today!"'
+        }
+    ]
+})
 
 </script>
 
@@ -104,25 +114,23 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
             <div class="container mx-auto px-6">
                 <div class="md:flex md:justify-evenly grid sm:grid-cols-2 gap-10 xl:w-3/4 mx-auto">
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <!-- Use <blockquote> for the quote -->
-                        <blockquote class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
+                        <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
                             The facilities are second to none, one of the best places to live in the city
-                        </blockquote>
-                        <!-- Use <cite> for the author -->
+                        </q>
                         <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- John Doe</cite>
                     </div>
 
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <blockquote class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
+                        <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
                             The facilities are second to none, one of the best places to live in the city
-                        </blockquote>
+                        </q>
                         <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Sam Harrison</cite>
                     </div>
 
                     <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
-                        <blockquote class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
+                        <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
                             The facilities are second to none, one of the best places to live in the city
-                        </blockquote>
+                        </q>
                         <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Olivia Cox</cite>
                     </div>
                 </div>

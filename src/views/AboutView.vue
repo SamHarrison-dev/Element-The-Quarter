@@ -1,6 +1,17 @@
 <script setup>
+import { useHead } from '@vueuse/head';
 import { ref, nextTick, onMounted, watch } from 'vue'
 import { useElementApi } from '@baleada/vue-features';
+
+useHead({
+    title: 'Element The Quarter | About us',
+    meta: [
+        {
+            name: 'description',
+            content: 'Discover The Element Quarter - Luxury student accommodation at the heart of Liverpool\'s city center. Limited rooms available for clearing today!'
+        }
+    ]
+})
 
 const images = ["https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/731535fe-f838-4b49-bd15-b9309a0773be/03-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/015e9d3c-6c0d-45e7-b83f-98c162c977b8/02-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/d3c1ac65-fb09-48b6-be0d-cc4d97a2cdf8/18-ELEMENT-The-Quarter-Aerial-3-scaled.jpeg"]
 const items = useElementApi({ kind: 'list' })
@@ -127,7 +138,7 @@ onMounted(() => {
                 <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
             </button>
         </div>
-        <section class="container mx-auto px-6 flex flex-col items-center justify-center">
+        <section class="container mx-auto px-6 flex flex-col items-center justify-center mb-16">
             <div class="w-full md:w-3/4">
                 <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center">About us heading</h2>
                 <p class="font-poppins text-[16px] md:text-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
