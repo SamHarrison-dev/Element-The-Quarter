@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@baleada/vue-features": "^0.13.2",
+    "sitemap": "^7.1.1",
     "vue": "^3.3.4",
-    "vue-router": "^4.1.6",
-    "@baleada/vue-features": "^0.13.2"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
