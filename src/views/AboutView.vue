@@ -92,8 +92,8 @@ onMounted(() => {
 <template>
     <div class="flex flex-col gap-16">
 
-        <div ref="mainImage" class="w-full relative">
-            <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
+        <div ref="mainImage" class="relative">
+            <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden place-items-center"
                 ref="carousel" :ref="container.ref" tabindex="0">
                 <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
                     :style="`width: ${width}px; height: ${height}px`" class="snap-center">
@@ -106,8 +106,7 @@ onMounted(() => {
                             class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                     </picture>
                 </figure>
-                <div
-                    class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center px-6 md:px-0">
+                <div class="absolute text-white top-0 flex flex-col w-auto h-full justify-center px-6 md:px-0">
                     <h1 id="title"
                         class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
                         Element The
