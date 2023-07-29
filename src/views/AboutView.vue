@@ -92,8 +92,8 @@ onMounted(() => {
 <template>
     <div class="flex flex-col gap-16">
 
-        <div ref="mainImage" class="relative">
-            <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
+        <div ref="mainImage">
+            <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden relative"
                 ref="carousel" :ref="container.ref" tabindex="0">
                 <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
                     :style="`width: ${width}px; height: ${height}px`" class="snap-center">
