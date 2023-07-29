@@ -3,7 +3,7 @@
 
 
 <template>
-    <section class="container mx-auto flex flex-col justify-center grow">
+    <section class="container mx-auto flex flex-col justify-center grow px-6 py-16">
         <h1 class="font-freight text-[42px] md:text-[60px] lg:text-[72px] bold tracking-wide leading-tight">
             Page Not Found
         </h1>
