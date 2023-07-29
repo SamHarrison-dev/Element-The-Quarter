@@ -13,12 +13,18 @@ const isMenuOpen = ref(false)
                     <img src="/leglogo.svg" width="100" height="100" alt="Legacie logo" class="w-[100px] h-[50px]" />
                 </a>
             </div>
-            <nav class="justify-end gap-6 font-poppins font-extralight hidden md:flex">
-                <a class="hover:underline hover:cursor-pointer p-1" href="/about" aria-label="Go to About page">Discover</a>
-                <a class="hover:underline hover:cursor-pointer p-1" href="/faq"
-                    aria-label="Go to Frequently Asked Questions page">FAQ</a>
-                <a class="md:block border rounded-full hover:underline hover:cursor-pointer py-1 px-4 hidden"
-                    href="#contact">Contact</a>
+            <nav class="font-poppins font-extralight hidden md:block">
+                <ul class="justify-end flex gap-6">
+                    <li class="hover:underline hover:cursor-pointer p-1"><a href="/about"
+                            aria-label="Go to About page">Discover</a></li>
+                    <li class="hover:underline hover:cursor-pointer p-1"><a href="/faq"
+                            aria-label="Go to Frequently Asked Questions page">FAQ</a></li>
+                    <li class="md:block border rounded-full hover:underline hover:cursor-pointer py-1 px-4 hidden">
+                        <a aria-label="Go to contact information" href="#contact">Contact</a>
+
+                    </li>
+
+                </ul>
             </nav>
             <nav class="flex md:hidden justify-end cursor-pointer relative text-white">
                 <div id="mobile-menu" :class="isMenuOpen ? 'open' : null" @click="isMenuOpen = !isMenuOpen">
