@@ -1,24 +1,112 @@
 <script setup>
+import { ref, nextTick, onMounted, watch } from 'vue'
+import { useElementApi } from '@baleada/vue-features';
+
+const images = ["https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/731535fe-f838-4b49-bd15-b9309a0773be/03-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/015e9d3c-6c0d-45e7-b83f-98c162c977b8/02-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/d3c1ac65-fb09-48b6-be0d-cc4d97a2cdf8/18-ELEMENT-The-Quarter-Aerial-3-scaled.jpeg"]
+const items = useElementApi({ kind: 'list' })
+const container = useElementApi()
+
+const carousel = ref(null)
+const mainImage = ref(null)
+const mainImageIndex = ref(0)
+const width = ref(0)
+const height = ref(0)
+const nextButton = ref(null)
+const scrollable = ref(false)
+const touchable = ref(false)
+
+function setScrollTouch() {
+    width.value = mainImage.value.clientWidth;
+    height.value = mainImage.value.outerHeight;
+    scrollable.value = images?.length > 1;
+    touchable.value = touchEnable();
+}
+
+function setMainIndex(index) {
+    carousel.value.focus();
+    carousel.value.scrollTo({
+        top: 0,
+        left: width.value * index
+    });
+}
+
+function changeImage(index) {
+    let scrollCoordinate = carousel.value.scrollLeft + width.value * index;
+
+    if (mainImageIndex.value + index < 0) {
+        scrollCoordinate = carousel.value.scrollLeft + width.value * images.length;
+    } else if (mainImageIndex.value + index > images.length - 1) {
+        console.log("this one fired")
+        scrollCoordinate = carousel.value.scrollRight + width.value * images.length;
+    }
+
+    carousel.value.focus();
+    carousel.value.scrollTo({
+        top: 0,
+        left: scrollCoordinate
+    })
+}
+
+function touchEnable() {
+    return (
+        'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
+    )
+}
+
+watch(() => images, (newVal, oldVal) => {
+    if (newVal !== oldVal) {
+        setMainIndex(0);
+    }
+}, {
+    deep: true
+})
+
+onMounted(() => {
+    setScrollTouch();
+    nextTick(() => {
+        window.addEventListener('resize', setScrollTouch)
+    })
+
+    let observer = new IntersectionObserver(entries => {
+        const { target } = entries[0]
+        const index = items.elements.value.findIndex((el) => el.isSameNode(target))
+        mainImageIndex.value = index
+
+    }, {
+        threshold: 0.85,
+        root: container.element.value
+    })
+
+    for (const element of items.elements.value) {
+        observer.observe(element)
+    }
+
+    setInterval(() => {
+        nextButton.value.click()
+        console.log("clicked")
+    }, 10000)
+
+
+})
 </script>
 
 <template>
-    <div class="w-full flex flex-col gap-16">
-        <div class="relative flex justify-center">
-            <figure class="w-full">
+    <div ref="mainImage" class="relative">
+        <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden"
+            ref="carousel" :ref="container.ref" tabindex="0">
+            <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
+                :style="`width: ${width}px; height: ${height}px`" class="snap-center px-4 sm:px-0">
                 <picture>
-                    <source media="(min-width: 1200px)"
-                        srcset="https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg?format=1400w" />
-                    <source media="(min-width: 992px)"
-                        srcset="https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg?format=1200w" />
-                    <source media="(min-width: 768px)"
-                        srcset="https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg?format=992w" />
-                    <source media="(min-width: 576px)"
-                        srcset="https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg?format=768w" />
-                    <img src="https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg?format=576w"
+                    <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
+                    <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
+                    <source media="(min-width: 768px)" :srcset="`${image}?format=992w`" />
+                    <source media="(min-width: 576px)" :srcset="`${image}?format=768w`" />
+                    <img :src="`${image}?format=576w`"
                         class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                 </picture>
             </figure>
-            <div class="absolute text-white top-0 flex flex-col w-auto h-full justify-center px-4 md:px-0">
+            <div
+                class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center px-4 md:px-0">
                 <h1 id="title"
                     class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
                     Element The
@@ -30,12 +118,26 @@
                     Discover more about us</h2>
             </div>
         </div>
-        <section class="container px-6">
-            <h2>Title for about page</h2>
-            <p class="text-[16px] md:text-[20px] font-poppins">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse praesentium voluptatem, ut soluta optio,
-                debitis consectetur dignissimos quia ullam distinctio dolore id molestias asperiores at facilis eaque, error
-                hic quo!</p>
-        </section>
+        <button v-if="scrollable && !touchable" type="button" aria-label="Toggle next image"
+            class="absolute invisible right-2 top-1/2 flex -translate-y-1/2 transition" ref="nextButton"
+            @click.prevent="changeImage(1)">
+            <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
+        </button>
     </div>
 </template>
+
+<style scoped>
+.carousel {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+</style>

@@ -5,14 +5,12 @@ const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/stud
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
 
 
-
-
 </script>
 
 <template>
     <div class="flex flex-col gap-16">
         <div class="w-full">
-            <figure class="relative flex justify-center overflow-x-auto">
+            <figure class="relative flex justify-center">
                 <picture class="w-full">
                     <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
                     <img src="/hero/banner-sm.jpg"
