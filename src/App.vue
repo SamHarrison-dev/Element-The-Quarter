@@ -32,12 +32,13 @@ html {
 }
 
 #title-divide {
-  animation: slideInAnimation 2s forwards;
+  opacity: 0;
+  animation: slideInAnimation 2.5s forwards;
 }
 
 @keyframes slideInAnimation {
   to {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 

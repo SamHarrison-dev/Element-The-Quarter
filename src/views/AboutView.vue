@@ -108,13 +108,13 @@ onMounted(() => {
                 </figure>
                 <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
                     <h1 id="title"
-                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
+                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide px-6 md:px-0">
                         Element The
                         Quarter
                     </h1>
-                    <hr id="title-divide" class="border border-[#fff] translate-x-full" />
+                    <hr id="title-divide" class="border border-[#fff]" />
                     <h2 id="subtitle"
-                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
+                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide px-6 md:px-0">
                         Discover more about us</h2>
                 </div>
             </div>
