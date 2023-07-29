@@ -12,14 +12,10 @@ const mainImageIndex = ref(0)
 const width = ref(0)
 const height = ref(0)
 const nextButton = ref(null)
-const scrollable = ref(false)
-const touchable = ref(false)
 
 function setScrollTouch() {
     width.value = mainImage.value.clientWidth;
     height.value = mainImage.value.outerHeight;
-    scrollable.value = images?.length > 1;
-    touchable.value = touchEnable();
 }
 
 function setMainIndex(index) {
@@ -45,12 +41,6 @@ function changeImage(index) {
         top: 0,
         left: scrollCoordinate
     })
-}
-
-function touchEnable() {
-    return (
-        'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
-    )
 }
 
 watch(() => images, (newVal, oldVal) => {
@@ -95,7 +85,7 @@ onMounted(() => {
         <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden"
             ref="carousel" :ref="container.ref" tabindex="0">
             <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
-                :style="`width: ${width}px; height: ${height}px`" class="snap-center px-4 sm:px-0">
+                :style="`width: ${width}px; height: ${height}px`" class="snap-center">
                 <picture>
                     <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
                     <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
@@ -118,7 +108,7 @@ onMounted(() => {
                     Discover more about us</h2>
             </div>
         </div>
-        <button v-if="scrollable && !touchable" type="button" aria-label="Toggle next image"
+        <button type="button" aria-label="Toggle next image"
             class="absolute invisible right-2 top-1/2 flex -translate-y-1/2 transition" ref="nextButton"
             @click.prevent="changeImage(1)">
             <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
