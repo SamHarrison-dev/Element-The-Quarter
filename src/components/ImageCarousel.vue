@@ -67,7 +67,8 @@ onMounted(() => {
     })
 
     let observer = new IntersectionObserver(entries => {
-        const { target } = entries[0]
+        const intersectingEntry = entries.find((entry) => entry.isIntersecting)
+        const { target } = intersectingEntry
         const index = items.elements.value.findIndex((el) => el.isSameNode(target))
         mainImageIndex.value = index
 
@@ -98,7 +99,7 @@ onMounted(() => {
         </div>
         <button v-if="scrollable && !touchable" type="button" aria-label="Toggle next image"
             class="absolute right-2 top-1/2 flex -translate-y-1/2 transition" @click.prevent="changeImage(1)">
-            <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
+            <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" loading="eager" />
         </button>
     </div>
     <div clas="sr-only flex flex-row items-center md:not-sr-only" v-if="scrollable">
