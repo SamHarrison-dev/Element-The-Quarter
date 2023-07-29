@@ -90,37 +90,53 @@ onMounted(() => {
 </script>
 
 <template>
-    <div ref="mainImage" class="relative">
-        <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
-            ref="carousel" :ref="container.ref" tabindex="0">
-            <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
-                :style="`width: ${width}px; height: ${height}px`" class="snap-center">
-                <picture>
-                    <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
-                    <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
-                    <source media="(min-width: 768px)" :srcset="`${image}?format=992w`" />
-                    <source media="(min-width: 576px)" :srcset="`${image}?format=768w`" />
-                    <img :src="`${image}?format=576w`"
-                        class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
-                </picture>
-            </figure>
-            <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
-                <h1 id="title"
-                    class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
-                    Element The
-                    Quarter
-                </h1>
-                <hr id="title-divide" class="border border-[#fff] translate-x-full" />
-                <h2 id="subtitle"
-                    class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
-                    Discover more about us</h2>
+    <div class="flex flex-col gap-16">
+
+        <div ref="mainImage" class="relative">
+            <div class="carousel no-scrollbar grid min-w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-hidden overflow-y-hidden"
+                ref="carousel" :ref="container.ref" tabindex="0">
+                <figure v-for="(image, index) in images" :ref="items.getRef(index)" :key="index"
+                    :style="`width: ${width}px; height: ${height}px`" class="snap-center">
+                    <picture>
+                        <source media="(min-width: 1200px)" :srcset="`${image}?format=1400w`" />
+                        <source media="(min-width: 992px)" :srcset="`${image}?format=1200w`" />
+                        <source media="(min-width: 768px)" :srcset="`${image}?format=992w`" />
+                        <source media="(min-width: 576px)" :srcset="`${image}?format=768w`" />
+                        <img :src="`${image}?format=576w`"
+                            class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
+                    </picture>
+                </figure>
+                <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
+                    <h1 id="title"
+                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
+                        Element The
+                        Quarter
+                    </h1>
+                    <hr id="title-divide" class="border border-[#fff] translate-x-full" />
+                    <h2 id="subtitle"
+                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
+                        Discover more about us</h2>
+                </div>
             </div>
+            <button type="button" aria-label="Toggle next image"
+                class="absolute invisible right-2 top-1/2 flex -translate-y-1/2 transition" ref="nextButton"
+                @click.prevent="changeImage(1)">
+                <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
+            </button>
         </div>
-        <button type="button" aria-label="Toggle next image"
-            class="absolute invisible right-2 top-1/2 flex -translate-y-1/2 transition" ref="nextButton"
-            @click.prevent="changeImage(1)">
-            <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
-        </button>
+        <section class="container mx-auto px-6 flex flex-col items-center justify-center">
+            <div class="w-full md:w-3/4">
+                <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center">About us heading</h2>
+                <p class="font-poppins text-[16px] md:text-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ratione veniam
+                    quas
+                    laboriosam sapiente numquam quidem accusamus temporibus. Dolores, libero. Sunt, dignissimos? Blanditiis
+                    dicta
+                    est, omnis fugiat magnam veritatis non nulla.</p>
+
+            </div>
+
+        </section>
     </div>
 </template>
 
