@@ -106,15 +106,16 @@ onMounted(() => {
                             class="aspect-[16/9] w-full h-full max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
                     </picture>
                 </figure>
-                <div class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center">
+                <div
+                    class="absolute place-self-center text-white top-0 flex flex-col w-auto h-full justify-center px-6 md:px-0">
                     <h1 id="title"
-                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide px-6 md:px-0">
+                        class="font-freight text-[42px] md:text-[60px] lg:text-[72px] italic text-center tracking-wide">
                         Element The
                         Quarter
                     </h1>
                     <hr id="title-divide" class="border border-[#fff]" />
                     <h2 id="subtitle"
-                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide px-6 md:px-0">
+                        class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide">
                         Discover more about us</h2>
                 </div>
             </div>
