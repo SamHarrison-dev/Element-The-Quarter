@@ -14,7 +14,8 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                 <picture class="w-full">
                     <source media="(min-width: 768px)" srcset="/hero/banner-lg.jpg" />
                     <img src="/hero/banner-sm.jpg"
-                        class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50" />
+                        class="aspect-[16/9] w-full h-auto max-w-full max-h-[816px] object-cover min-h-[50vh] brightness-50"
+                        alt="Element The Quarter hero banner - rooftop garden" />
                 </picture>
                 <div class="absolute text-white top-0 flex flex-col w-auto h-full justify-center px-6 md:px-6"
                     aria-label="Homepage banner overlay container" tabindex="0">
@@ -152,7 +153,7 @@ const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/clu
                 <div tabindex="0" aria-label="The Element quarter student accomodation location - Google Maps">
                     <a href="https://www.google.com/maps?rlz=1C5CHFA_enGB923GB923&output=search&q=the+element+quarter+liverpool&source=lnms&entry=mc&sa=X&ved=2ahUKEwiG-tDEtrSAAxUNVUEAHXyKBuIQ0pQJegQIDRAB"
                         class="sr-only" aria-label="open Google Maps to see The Element Quarter location" targt="_blank" />
-                    <iframe class="rounded-lg shadow"
+                    <iframe class="rounded-lg shadow" title="Google maps - Element The Quarter"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.0670073078822!2d-2.9651933228248524!3d53.41362776968672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21e393e1b963%3A0x7ef05b0c42a706a0!2sElement%20The%20Quarter!5e0!3m2!1sen!2suk!4v1690121352280!5m2!1sen!2suk"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
