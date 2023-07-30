@@ -112,7 +112,7 @@ onMounted(() => {
         </button>
     </div>
     <div clas="flex flex-row items-center" v-if="scrollable">
-        <ul class="flex-no-wrap mt-6 flex h-full w-full items-center justify-center gap-4"
+        <ul class="flex-no-wrap mt-6 flex h-full w-full items-center justify-center gap-4 relative"
             aria-label="Student accomodation images">
             <li v-for="(image, index) in images" :key="index">
                 <button type="button" @click="setMainIndex(index)" tabindex="0"

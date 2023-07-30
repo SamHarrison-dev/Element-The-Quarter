@@ -69,45 +69,70 @@ useHead({
             </article>
         </div>
 
-        <section class="flex flex-col gap-8">
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto">
-                <div class="order-2 sm:order-1">
-                    <ImageCarousel :images="studioImages" />
-                </div>
-                <aside class="flex flex-col gap-3 justify-center items-center order-1 sm:order-2 font-poppins"
-                    aria-label="Studio information" tabindex="0">
-                    <div>
-                        <h2 class="text-[36px] font-freight text-center">Studio</h2>
-                        <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
+        <section class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
+            <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide"
+                tabindex="0">
+                Why Element The Quarter</h2>
+            <p class="text-[16px] md:text-[20px] font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam modi magnam nihil eligendi vero, fuga temporibus inventore rem eos, illo mollitia consectetur dolor
+                aut similique nisi. Atque odio deleniti tempora!</p>
+        </section>
 
+        <section class="flex flex-col gap-8 relative">
+            <div id="room-wrapper" class="before:w-full before:py-10 before:absolute before:bg-[#faf0e6]">
+                <div class="py-10">
+                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:py-10">
+                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">Studio living</h2>
+                        <div>
+                            <ImageCarousel :images="studioImages" />
+                        </div>
+                        <aside
+                            class="flex flex-col gap-3 justify-center items-center order-1 sm:order-2 font-poppins z-10 py-10 md:py-0"
+                            aria-label="Studio information" tabindex="0">
+                            <h2 class="text-[36px] font-freight hidden sm:flex">Studio</h2>
+                            <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
+
+                            <p>Text about the studio</p>
+                            <a class="md:hidden flex" href="tel:+44(0)1512079990">
+                                <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
+                                    now</button></a>
+                            <a href="#contact"
+                                class="hidden md:flex rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline"
+                                aria-label="Navigate to contact information to enquire">Enquire now</a>
+                        </aside>
                     </div>
-                    <p>Text about the studio</p>
-                    <a class="md:hidden flex" href="tel:+44(0)1512079990">
-                        <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
-                            now</button></a>
-                    <a href="#contact" class="hidden md:flex rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline"
-                        aria-label="Navigate to contact information to enquire">Enquire now</a>
-                </aside>
-            </div>
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
-                <aside class="flex flex-col gap-4 justify-center items-center">
-                    <h2 class="text-[36px] font-freight">Cluster</h2>
-                    <p>Text about the cluster</p>
-                    <button>Discover More</button>
-                </aside>
-                <div>
-                    <ImageCarousel :images="clusterImages" />
+                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:py-10">
+                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">Cluster Living</h2>
+                        <aside
+                            class="flex flex-col gap-4 justify-center items-center z-10 order-2 font-poppins sm:order-1 py-10 md:py-0">
+                            <h2 class="text-[36px] font-freight hidden sm:flex">Cluster</h2>
+                            <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
+
+                            <p>Text about the cluster</p>
+                            <a class="md:hidden flex" href="tel:+44(0)1512079990">
+                                <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
+                                    now</button></a>
+                            <a href="#contact"
+                                class="hidden md:flex rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline"
+                                aria-label="Navigate to contact information to enquire">Enquire now</a>
+                        </aside>
+                        <div class="order-1 sm:order-2">
+                            <ImageCarousel :images="clusterImages" />
+                        </div>
+                    </div>
+                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:pt-10">
+                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">The Facilities</h2>
+                        <div>
+                            <ImageCarousel :images="studioImages" />
+                        </div>
+                        <aside
+                            class="flex flex-col gap-4 justify-center items-center order-1 font-poppins sm:order-2 z-10 py-10 md:py-0">
+                            <h2 class="text-[36px] font-freight hidden sm:flex">Facilities</h2>
+                            <p>Text about the facilities</p>
+                            <button>Discover More</button>
+                        </aside>
+                    </div>
                 </div>
-            </div>
-            <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto ">
-                <div class="order-2 sm:order-1">
-                    <ImageCarousel :images="studioImages" />
-                </div>
-                <aside class="flex flex-col gap-4 justify-center items-center order-1 sm:order-2">
-                    <h2 class="text-[36px] font-freight">Facilities</h2>
-                    <p>Text about the facilities</p>
-                    <button>Discover More</button>
-                </aside>
             </div>
         </section>
         <section class="w-full md:py-20 py-12 bg-[#d9e3da]">
@@ -172,3 +197,8 @@ useHead({
     </div>
 </template>
 
+<style scoped>
+#room-wrapper::before {
+    height: calc(100% - 18vw);
+}
+</style>
