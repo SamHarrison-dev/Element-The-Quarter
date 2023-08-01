@@ -130,9 +130,7 @@ useHead({
 
             <p class="font-poppins font-bold text-[20px]">Not found the answer you where looking for? Call our helpful team
                 on <a href="href=tel:+44(0)1512079990" class="underline"
-                    aria-label="Contact us through phone on +44(0)1512079990">01512079990</a> or email us at <a
-                    href="mailto:abc@example.com" class="underline"
-                    aria-label="Contact us through email at abc@example.com">abc@example.com</a> </p>
+                    aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
 
         </section>
     </div>

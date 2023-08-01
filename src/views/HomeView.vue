@@ -47,21 +47,16 @@ useHead({
             <article class="bg-[#d9e3da] py-12 md:py-20" tabindex="0" aria-label="The Element Quarter blurb">
                 <div class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
                     <div class="font-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
-                        <p tabindex="0">Welcome to our brand-new student accommodation building, located at the heart of the
-                            vibrant city center!
-                            Designed with the needs of modern students in mind, our prime location puts you within easy
-                            reach of
-                            univesity buildings, libraries, and all the excitement the city has to offer. </p>
+                        <p tabindex="0">Welcome to Element - The Quarter, Liverpool's brand-new eco-friendly accommodation
+                            building, by Legacie. Located at the heart of the vibrant city centre! Designed with the needs
+                            of modern students in mind, our prime location puts you within easy reach of university
+                            buildings, libraries, and all the excitement the city has to offer. </p>
                         <p tabindex="0">
-                            Say goodbye to long
-                            commutes and
-                            hello to convenience and connectivity. Not only will you be immersed in the bustling urban
-                            atmosphere,
-                            but you'll also enjoy the advantage of having our very own on-site gym, promoting a healthy and
-                            active
-                            lifestyle. Embrace a dynamic living experience where academic excellence meets urban living, as
-                            we
-                            provide a comfortable, secure, and inspiring environment for you to thrive.
+                            Say goodbye to long commutes and hello to convenience and connectivity. Not only will you be
+                            immersed in the bustling urban atmosphere, but you'll also enjoy the advantage of having our
+                            very own on-site gym, promoting a healthy and active lifestyle. Embrace a dynamic living
+                            experience where academic excellence meets urban living, as we provide a comfortable, secure,
+                            and inspiring environment for you to thrive.
                         </p>
 
                     </div>
@@ -73,63 +68,134 @@ useHead({
             <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center italic tracking-wide"
                 tabindex="0">
                 Why Element The Quarter</h2>
-            <p class="text-[16px] md:text-[20px] font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Numquam modi magnam nihil eligendi vero, fuga temporibus inventore rem eos, illo mollitia consectetur dolor
-                aut similique nisi. Atque odio deleniti tempora!</p>
+            <p class="text-[16px] md:text-[20px] font-poppins">With state of the art, hotel style facilities and a prime
+                location for all Universities in Liverpool, Element – The Quarter is set to be Liverpool’s most desired
+                student accommodation yet! Set just 350 metres from the Royal Liverpool University Hospital and boasting
+                unbeatable facilities such as an on-site gym, cinema room, rooftop terrace and so much more, Element – The
+                Quarter has everything the modern student could wish for, all whilst being just a short walk from the city
+                centre.</p>
         </section>
 
         <section class="flex flex-col gap-8 relative">
             <div id="room-wrapper" class="before:w-full before:py-10 before:absolute before:bg-[#faf0e6]">
                 <div class="py-10">
-                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:py-10">
-                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">Studio living</h2>
+                    <div class="lg:grid lg:grid-cols-2 flex flex-col gap-4 container mx-auto lg:py-10">
+                        <h2 class="text-[36px] font-freight justify-center lg:hidden flex z-10">Private Studio</h2>
                         <div>
                             <ImageCarousel :images="studioImages" />
                         </div>
                         <aside
-                            class="flex flex-col gap-3 justify-center items-center order-1 sm:order-2 font-poppins z-10 py-10 md:py-0"
+                            class="flex flex-col gap-3 order-1 lg:order-2 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
                             aria-label="Studio information" tabindex="0">
-                            <h2 class="text-[36px] font-freight hidden sm:flex">Studio</h2>
-                            <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
-
-                            <p>Text about the studio</p>
-                            <a class="md:hidden flex" href="tel:+44(0)1512079990">
+                            <h2 class="text-[36px] font-freight hidden lg:flex">Private Studio</h2>
+                            <p class="pb-4"><strong>Available from 15th September 2023.</strong></p>
+                            <p>Introducing our brand new, state-of-the-art studio apartments, designed especially for
+                                eco-conscious students. Experience the perfect blend of modern living and sustainable
+                                features.</p>
+                            <p>Our perfectly crafted studio apartments offer the perfect sanctuary for students seeking
+                                comfort and convenience. Step into your private oasis, featuring a cosy living area, fully
+                                equipped kitchenette and stylish bathroom, with laundry facilities also on-site - everything
+                                you need for a comfortable lifestyle.</p>
+                            <ul group="features" class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 md:py-6">
+                                <li class="flex gap-3"><img src="/icons/credit-card.svg" height="24" width="24"
+                                        aria-hidden="true" />All bills included</li>
+                                <li class="flex gap-3"><img src="/icons/wifi.svg" height="24" width="24"
+                                        aria-hidden="true" />Free WiFi</li>
+                                <li class="flex gap-3"><img src="/icons/user.svg" height="24" width="24"
+                                        aria-hidden="true" />Concierge</li>
+                                <li class="flex gap-3"><img src="/icons/shield.svg" height="24" width="24"
+                                        aria-hidden="true" />24-hour security</li>
+                                <li class="flex gap-3"><img src="/icons/truck.svg" height="24" width="24"
+                                        aria-hidden="true" />On-site parking</li>
+                                <li class="flex gap-3"><img src="/icons/monitor.svg" height="24" width="24"
+                                        aria-hidden="true" />Smart TV included</li>
+                            </ul>
+                            <p class="text-center">Contact us to book a viewing on <a href="tel:+44(0)1512079990"
+                                    class="underline"
+                                    aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
+                            <p class="uppercase">or</p>
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/137836298#/?channel=STU_LET"
+                                aria-label="View Studio on Rightmove" target="_blank">
                                 <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
-                                    now</button></a>
-                            <a href="#contact"
-                                class="hidden md:flex rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline"
-                                aria-label="Navigate to contact information to enquire">Enquire now</a>
+                                    now</button>
+                            </a>
                         </aside>
                     </div>
-                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:py-10">
-                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">Cluster Living</h2>
+                    <div class="lg:grid lg:grid-cols-2 flex flex-col gap-4 container mx-auto lg:py-10">
+                        <h2 class="text-[36px] font-freight justify-center lg:hidden flex z-10">Cluster Apartment</h2>
                         <aside
-                            class="flex flex-col gap-4 justify-center items-center z-10 order-2 font-poppins sm:order-1 py-10 md:py-0">
-                            <h2 class="text-[36px] font-freight hidden sm:flex">Cluster</h2>
-                            <span class="opacity-70 text-[16px]">1 bedroom spacious apartment</span>
-
-                            <p>Text about the cluster</p>
-                            <a class="md:hidden flex" href="tel:+44(0)1512079990">
+                            class="flex flex-col gap-3 order-2 lg:order-1 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
+                            aria-label="Studio information" tabindex="0">
+                            <h2 class="text-[36px] font-freight hidden lg:flex">Cluster Apartment</h2>
+                            <p class="pb-4"><strong>Available from 15th September 2023.</strong></p>
+                            <p>Introducing our brand new, cutting-edge shared cluster apartments, designed for students
+                                wanting a more social approach to living. Experience the perfect blend of modern communal
+                                leaving and sustainable features, all within your reach.</p>
+                            <p>Here, you and your friends can create lasting memories together. Each shared cluster
+                                apartment offers spacious and well-designed living areas, fully equipped kitchens, stylish
+                                bedrooms and 5 private en-suite bedrooms – the ultimate combination of comfort and
+                                camaraderie.</p>
+                            <ul group="features" class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 md:py-6">
+                                <li class="flex gap-3"><img src="/icons/credit-card.svg" height="24" width="24"
+                                        aria-hidden="true" />All bills included</li>
+                                <li class="flex gap-3"><img src="/icons/wifi.svg" height="24" width="24"
+                                        aria-hidden="true" />Free WiFi</li>
+                                <li class="flex gap-3"><img src="/icons/user.svg" height="24" width="24"
+                                        aria-hidden="true" />Concierge</li>
+                                <li class="flex gap-3"><img src="/icons/shield.svg" height="24" width="24"
+                                        aria-hidden="true" />24-hour security</li>
+                                <li class="flex gap-3"><img src="/icons/truck.svg" height="24" width="24"
+                                        aria-hidden="true" />On-site parking</li>
+                                <li class="flex gap-3"><img src="/icons/monitor.svg" height="24" width="24"
+                                        aria-hidden="true" />Smart TV included</li>
+                            </ul>
+                            <p class="text-center">Contact us to book a viewing on <a href="tel:+44(0)1512079990"
+                                    class="underline"
+                                    aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
+                            <p class="uppercase">or</p>
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/137886077#/?channel=STU_LET"
+                                aria-label="View Studio on Rightmove" target="_blank">
                                 <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
-                                    now</button></a>
-                            <a href="#contact"
-                                class="hidden md:flex rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline"
-                                aria-label="Navigate to contact information to enquire">Enquire now</a>
+                                    now</button>
+                            </a>
                         </aside>
-                        <div class="order-1 sm:order-2">
-                            <ImageCarousel :images="clusterImages" />
+                        <div class="order-1 lg:order-2">
+                            <ImageCarousel :images="clusterImages" :papMessage="true" />
                         </div>
                     </div>
-                    <div class="sm:grid sm:grid-cols-2 flex flex-col gap-4 container mx-auto sm:pt-10">
-                        <h2 class="text-[36px] font-freight justify-center sm:hidden flex z-10">The Facilities</h2>
+                    <div class="md:grid md:grid-cols-2 flex flex-col gap-4 container mx-auto lg:pt-10">
+                        <h2 class="text-[36px] font-freight justify-center md:hidden flex z-10">The Facilities</h2>
                         <div>
                             <ImageCarousel :images="studioImages" />
                         </div>
                         <aside
-                            class="flex flex-col gap-4 justify-center items-center order-1 font-poppins sm:order-2 z-10 py-10 md:py-0">
-                            <h2 class="text-[36px] font-freight hidden sm:flex">Facilities</h2>
-                            <p>Text about the facilities</p>
-                            <button>Discover More</button>
+                            class="flex flex-col gap-3 order-1 lg:order-2 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
+                            aria-label="Studio information" tabindex="0">
+                            <h2 class="text-[36px] font-freight hidden lg:flex">The Facilities</h2>
+                            <ul group="facilities" class="flex gap-4 flex-col py-6 self-start">
+                                <li class="flex gap-3"><img src="/icons/gym.svg" height="32" width="32"
+                                        aria-hidden="true" />Stay active in the on-site gym
+                                </li>
+                                <li class="flex gap-3"><img src="/icons/cinema.svg" height="32" width="32"
+                                        aria-hidden="true" />Movie-nights redefined in our luxurious cinema room.</li>
+                                <li class="flex gap-3"><img src="/icons/sofa.svg" height="32" width="32"
+                                        aria-hidden="true" />Connect and unwind in the common room.</li>
+                                <li class="flex gap-3"><img src="/icons/study.svg" height="32" width="32"
+                                        aria-hidden="true" />Our dedicated study areas provides the ideal space for group
+                                    projects, collaborative learning and group study sessions.</li>
+                                <li class="flex gap-3"><img src="/icons/sunset.svg" height="32" width="32"
+                                        aria-hidden="true" />Our rooftop terrace is not only a social sanctuary, but also a
+                                    hub of activity with spectacular views of Liverpool's skyline.</li>
+                            </ul>
+                            <p class="text-center">Contact us to book a viewing on <a href="tel:+44(0)1512079990"
+                                    class="underline"
+                                    aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
+                            <p class="uppercase">or</p>
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/137836298#/?channel=STU_LET"
+                                aria-label="View Studio on Rightmove" target="_blank">
+                                <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
+                                    now</button>
+                            </a>
                         </aside>
                     </div>
                 </div>
@@ -137,26 +203,32 @@ useHead({
         </section>
         <section class="w-full md:py-20 py-12 bg-[#d9e3da]">
             <div class="container mx-auto px-6">
-                <div class="md:flex md:justify-evenly grid sm:grid-cols-2 gap-10 xl:w-3/4 mx-auto">
-                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                <div class="lg:flex lg:justify-evenly grid gap-10 w-full mx-auto">
+                    <div class="border rounded-lg p-8 shadow flex flex-col gap-4 bg-[#f5f5f5]">
                         <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
-                            The facilities are second to none, one of the best places to live in the city
+                            The apartment is very stylish and practical. The building has everything you need and even more,
+                            such as parking, gym, etc. Very nice and helpful concierges. Management and service at the
+                            highest level. I can recommend them.
                         </q>
-                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- John Doe</cite>
+                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Oleksandr</cite>
                     </div>
 
-                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                    <div class="border rounded-lg p-8 shadow flex flex-col gap-4 bg-[#f5f5f5]">
                         <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
-                            The facilities are second to none, one of the best places to live in the city
+                            Lovely, modern apartments with decent sized en suites. The communal areas are always super clean
+                            and the staff are very friendly and accommodating. The gym on the top floor is a fantastic
+                            bonus!
                         </q>
-                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Sam Harrison</cite>
+                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Katie</cite>
                     </div>
 
-                    <div class="border rounded-lg p-8 shadow md:w-3/4 flex flex-col gap-4 bg-[#f5f5f5]">
+                    <div class="border rounded-lg p-8 shadow flex flex-col gap-4 bg-[#f5f5f5]">
                         <q class="font-freight text-[24px] italic tracking-wide lg:text-[32px]">
-                            The facilities are second to none, one of the best places to live in the city
+                            I have been a tenant with Legacie several times since 2019 and they have always been fantastic.
+                            The staff have always been welcoming and friendly, and very quick to fix any issues relating to
+                            our apartment.
                         </q>
-                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Olivia Cox</cite>
+                        <cite class="text-right font-poppins text-[14px] not-italic tracking-normal">- Laura</cite>
                     </div>
                 </div>
             </div>
@@ -199,6 +271,6 @@ useHead({
 
 <style scoped>
 #room-wrapper::before {
-    height: calc(100% - 18vw);
+    height: calc(100% - 10vw);
 }
 </style>

@@ -3,7 +3,8 @@ import { ref, nextTick, onMounted, watch } from 'vue'
 import { useElementApi } from '@baleada/vue-features';
 
 const props = defineProps({
-    images: Array
+    images: Array,
+    papMessage: Boolean
 })
 
 const items = useElementApi({ kind: 'list' })
@@ -110,6 +111,10 @@ onMounted(() => {
             class="absolute right-2 top-1/2 flex -translate-y-1/2 transition" @click.prevent="changeImage(1)">
             <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" loading="eager" />
         </button>
+        <div v-if="papMessage"
+            class="absolute top-[5%] left-[5%] border rounded-full py-2 px-4 bg-[#050A30] text-white font-poppins">
+            <span>Last 2 remaining!</span>
+        </div>
     </div>
     <div clas="flex flex-row items-center" v-if="scrollable">
         <ul class="flex-no-wrap mt-6 flex h-full w-full items-center justify-center gap-4 relative"
@@ -122,7 +127,7 @@ onMounted(() => {
             </li>
         </ul>
         <div ref="announcer" role="log" aria-live="assertive" aria-atomic="true"
-            class="absolute translat-x-[-100000px] overflow-hidden w-[1px] h-[1px] top-auto"></div>
+            class="absolute translate-x-[-100000px] overflow-hidden w-[1px] h-[1px] top-auto"></div>
     </div>
 </template>
 

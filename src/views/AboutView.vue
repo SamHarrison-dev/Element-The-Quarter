@@ -13,7 +13,7 @@ useHead({
     ]
 })
 
-const images = ["https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/731535fe-f838-4b49-bd15-b9309a0773be/03-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/015e9d3c-6c0d-45e7-b83f-98c162c977b8/02-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/d3c1ac65-fb09-48b6-be0d-cc4d97a2cdf8/18-ELEMENT-The-Quarter-Aerial-3-scaled.jpeg"]
+const images = ["https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/015e9d3c-6c0d-45e7-b83f-98c162c977b8/02-The-Quarter-Exterior-1-scaled.jpeg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/1617099896080-GQO81L0T9YIARUX9XUGG/14+ELEMENT+-+The+Quarter+Exterior.jpg", "https://images.squarespace-cdn.com/content/v1/606205865118af033d116181/d3c1ac65-fb09-48b6-be0d-cc4d97a2cdf8/18-ELEMENT-The-Quarter-Aerial-3-scaled.jpeg"]
 const items = useElementApi({ kind: 'list' })
 const container = useElementApi()
 

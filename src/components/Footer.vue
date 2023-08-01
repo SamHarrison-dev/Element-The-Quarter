@@ -15,12 +15,6 @@
                             aria-label="Contact us through phone on +44(0)1512079990">+44 (0)
                             1512079990</a>
                     </div>
-                    <div class="flex gap-4">
-                        <img src="/icons/mail.svg" height="20" width="20" alt="Email" />
-                        <a href="mailto:abc@example.com" class="underline"
-                            aria-label="Contact us through email at abc@example.com">abc@example.com</a>
-                    </div>
-
                 </div>
                 <div class="flex flex-col gap-3 md:pr-10">
                     <h3 class="font-freight underline underline-offset-4 text-[28px]">Explore</h3>
@@ -51,4 +45,5 @@
 
         </div>
 
-</footer></template>
+    </footer>
+</template>
