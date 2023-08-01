@@ -36,8 +36,8 @@ useHead({
             </picture>
         </figure>
 
-        <section role="list" class="container mx-auto px-6 flex flex-col gap-8 mb-16">
-            <div role="listitem" class="flex flex-col gap-3">
+        <section class="container mx-auto px-6 flex flex-col gap-8 mb-16">
+            <div class="flex flex-col gap-3">
                 <span class="list-disc list-item list-inside font-poppins font-bold ml-6 text-[20px]">This is my
                     question</span>
                 <span class="font-poppins text-[18px] font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
