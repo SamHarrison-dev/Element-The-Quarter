@@ -97,17 +97,17 @@ useHead({
                                 equipped kitchenette and stylish bathroom, with laundry facilities also on-site - everything
                                 you need for a comfortable lifestyle.</p>
                             <ul group="features" class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 md:py-6">
-                                <li class="flex gap-3"><img src="/icons/credit-card.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/credit-card.svg" height="24" width="24"
                                         aria-hidden="true" />All bills included</li>
-                                <li class="flex gap-3"><img src="/icons/wifi.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/wifi.svg" height="24" width="24"
                                         aria-hidden="true" />Free WiFi</li>
-                                <li class="flex gap-3"><img src="/icons/user.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/user.svg" height="24" width="24"
                                         aria-hidden="true" />Concierge</li>
-                                <li class="flex gap-3"><img src="/icons/shield.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/shield.svg" height="24" width="24"
                                         aria-hidden="true" />24-hour security</li>
-                                <li class="flex gap-3"><img src="/icons/truck.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/truck.svg" height="24" width="24"
                                         aria-hidden="true" />On-site parking</li>
-                                <li class="flex gap-3"><img src="/icons/monitor.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/monitor.svg" height="24" width="24"
                                         aria-hidden="true" />Smart TV included</li>
                             </ul>
                             <p class="text-center">Contact us to book a viewing on <a href="tel:+44(0)1512079990"
@@ -133,20 +133,20 @@ useHead({
                                 leaving and sustainable features, all within your reach.</p>
                             <p>Here, you and your friends can create lasting memories together. Each shared cluster
                                 apartment offers spacious and well-designed living areas, fully equipped kitchens, stylish
-                                bedrooms and 5 private en-suite bedrooms – the ultimate combination of comfort and
+                                bedrooms and 5 private en-suite bedrooms - the ultimate combination of comfort and
                                 camaraderie.</p>
                             <ul group="features" class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 md:py-6">
-                                <li class="flex gap-3"><img src="/icons/credit-card.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/credit-card.svg" height="24" width="24"
                                         aria-hidden="true" />All bills included</li>
-                                <li class="flex gap-3"><img src="/icons/wifi.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/wifi.svg" height="24" width="24"
                                         aria-hidden="true" />Free WiFi</li>
-                                <li class="flex gap-3"><img src="/icons/user.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/user.svg" height="24" width="24"
                                         aria-hidden="true" />Concierge</li>
-                                <li class="flex gap-3"><img src="/icons/shield.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/shield.svg" height="24" width="24"
                                         aria-hidden="true" />24-hour security</li>
-                                <li class="flex gap-3"><img src="/icons/truck.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/truck.svg" height="24" width="24"
                                         aria-hidden="true" />On-site parking</li>
-                                <li class="flex gap-3"><img src="/icons/monitor.svg" height="24" width="24"
+                                <li class="flex gap-3 items-center"><img src="/icons/monitor.svg" height="24" width="24"
                                         aria-hidden="true" />Smart TV included</li>
                             </ul>
                             <p class="text-center">Contact us to book a viewing on <a href="tel:+44(0)1512079990"
