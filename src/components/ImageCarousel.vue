@@ -30,7 +30,6 @@ function setMainIndex(index) {
         top: 0,
         left: width.value * index
     });
-    mainImageIndex.value = index
 }
 
 function changeImage(index) {
@@ -41,8 +40,6 @@ function changeImage(index) {
     } else if (mainImageIndex.value + index > props.images.length - 1) {
         scrollCoordinate = carousel.value.scrollRight + width.value * props.images.length;
     }
-
-    mainImageIndex.value = index
 
     carousel.value.focus();
     carousel.value.scrollTo({
@@ -56,14 +53,6 @@ function touchEnable() {
         'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
     )
 }
-
-watch(() => props.images, (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-        setMainIndex(0);
-    }
-}, {
-    deep: true
-})
 
 onMounted(() => {
     setScrollTouch();

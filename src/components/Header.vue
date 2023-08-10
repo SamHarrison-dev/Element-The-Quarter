@@ -25,8 +25,8 @@ const openMenu = () => {
                 <ul class="justify-end flex gap-6">
                     <li class="hover:underline hover:cursor-pointer p-1"><a href="/about"
                             aria-label="Go to About page">Discover</a></li>
-                    <li class="hover:underline hover:cursor-pointer p-1"><a href="/faq"
-                            aria-label="Go to Frequently Asked Questions page">FAQ</a></li>
+                    <li class="hover:underline hover:cursor-pointer p-1"><a href="/#rooms"
+                            aria-label="Go to Student accomodation rooms">Rooms</a></li>
                     <li class="md:block border rounded-full hover:underline hover:cursor-pointer py-1 px-4 hidden">
                         <a aria-label="Go to contact information" href="#contact">Contact</a>
 
@@ -48,8 +48,8 @@ const openMenu = () => {
                 <ul class="flex gap-4 font-poppins">
                     <li class="focus:underline active:underline"><a href="/about" aria-label="Go to About page">Discover</a>
                     </li>
-                    <li class="focus:underline active:underline"><a href="/faq"
-                            aria-label="Go to Frequently Asked Questions page">FAQ</a></li>
+                    <li class="focus:underline active:underline"><a href="/#rooms"
+                            aria-label="Go to Student accomodation rooms">Rooms</a></li>
                     <li class="focus:underline active:underline"><a href="tel:01512079990"
                             aria-label="Call Element The Quarter">Contact</a></li>
                 </ul>

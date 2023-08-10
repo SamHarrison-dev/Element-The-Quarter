@@ -4,6 +4,7 @@ import ImageCarousel from '../components/ImageCarousel.vue'
 
 const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/studio/DSC04700.jpg', '/studio/DSC04712.jpg', '/studio/DSC04717.jpg', '/studio/DSC04742.jpg']
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
+const facilitiesImages = ['/facilities/BarImage.jpg', '/facilities/Cinema2.jpg', '/facilities/Gym2.jpg', '/facilities/Lounge1.jpg', '/facilities/Rooftop4.jpg', '/facilities/EvElement2.jpg']
 
 useHead({
     title: 'Element The Quarter | Reserve your new luxury student accomodation in Liverpool city center',
@@ -47,10 +48,10 @@ useHead({
             <article class="bg-[#d9e3da] py-12 md:py-20" tabindex="0" aria-label="The Element Quarter blurb">
                 <div class="container mx-auto md:w-3/4 w-full flex flex-col gap-4 md:gap-6 px-6">
                     <div class="font-poppins flex flex-col gap-4 md:gap-6 text-[16px] md:text-[20px]">
-                        <p tabindex="0">Welcome to Element - The Quarter, Liverpool's brand-new eco-friendly accommodation
+                        <p tabindex="0">Welcome to Element The Quarter, Liverpool's brand-new eco-friendly accommodation
                             building, by Legacie. Located at the heart of the vibrant city centre! Designed with the needs
                             of modern students in mind, our prime location puts you within easy reach of university
-                            buildings, libraries, and all the excitement the city has to offer. </p>
+                            buildings, libraries, and all the excitement the city has to offer.</p>
                         <p tabindex="0">
                             Say goodbye to long commutes and hello to convenience and connectivity. Not only will you be
                             immersed in the bustling urban atmosphere, but you'll also enjoy the advantage of having our
@@ -69,15 +70,15 @@ useHead({
                 tabindex="0">
                 Why Element The Quarter</h2>
             <p class="text-[16px] md:text-[20px] font-poppins">With state of the art, hotel style facilities and a prime
-                location for all Universities in Liverpool, Element – The Quarter is set to be Liverpool’s most desired
+                location for all Universities in Liverpool, Element The Quarter is set to be Liverpool's most desired
                 student accommodation yet! Set just 350 metres from the Royal Liverpool University Hospital and boasting
-                unbeatable facilities such as an on-site gym, cinema room, rooftop terrace and so much more, Element – The
+                unbeatable facilities such as an on-site gym, cinema room, rooftop terrace and so much more, Element - The
                 Quarter has everything the modern student could wish for, all whilst being just a short walk from the city
                 centre.</p>
         </section>
 
         <section class="flex flex-col gap-8 relative">
-            <div id="room-wrapper" class="before:w-full before:py-10 before:absolute before:bg-[#faf0e6]">
+            <div id="rooms" class="before:w-full before:py-10 before:absolute before:bg-[#faf0e6]">
                 <div class="py-10">
                     <div class="lg:grid lg:grid-cols-2 flex flex-col gap-4 container mx-auto lg:py-10">
                         <h2 class="text-[36px] font-freight justify-center lg:hidden flex z-10">Private Studio</h2>
@@ -88,7 +89,7 @@ useHead({
                             class="flex flex-col gap-3 order-1 lg:order-2 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
                             aria-label="Studio information" tabindex="0">
                             <h2 class="text-[36px] font-freight hidden lg:flex">Private Studio</h2>
-                            <p class="pb-4"><strong>Available from 15th September 2023.</strong></p>
+                            <p class="pb-4"><strong>Available from 15th September 2023</strong></p>
                             <p>Introducing our brand new, state-of-the-art studio apartments, designed especially for
                                 eco-conscious students. Experience the perfect blend of modern living and sustainable
                                 features.</p>
@@ -127,7 +128,7 @@ useHead({
                             class="flex flex-col gap-3 order-2 lg:order-1 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
                             aria-label="Studio information" tabindex="0">
                             <h2 class="text-[36px] font-freight hidden lg:flex">Cluster Apartment</h2>
-                            <p class="pb-4"><strong>Available from 15th September 2023.</strong></p>
+                            <p class="pb-4"><strong>Available from 15th September 2023</strong></p>
                             <p>Introducing our brand new, cutting-edge shared cluster apartments, designed for students
                                 wanting a more social approach to living. Experience the perfect blend of modern communal
                                 leaving and sustainable features, all within your reach.</p>
@@ -166,7 +167,7 @@ useHead({
                     <div class="md:grid md:grid-cols-2 flex flex-col gap-4 container mx-auto lg:pt-10">
                         <h2 class="text-[36px] font-freight justify-center md:hidden flex z-10">The Facilities</h2>
                         <div>
-                            <ImageCarousel :images="studioImages" />
+                            <ImageCarousel :images="facilitiesImages" />
                         </div>
                         <aside
                             class="flex flex-col gap-3 order-1 lg:order-2 font-poppins z-10 px-6 py-10 lg:py-0 text-[16px] items-center"
@@ -174,12 +175,13 @@ useHead({
                             <h2 class="text-[36px] font-freight hidden lg:flex">The Facilities</h2>
                             <ul group="facilities" class="flex gap-4 flex-col py-6 self-start">
                                 <li class="flex gap-3"><img src="/icons/gym.svg" height="32" width="32"
-                                        aria-hidden="true" />Stay active in the on-site gym
+                                        aria-hidden="true" />Stay active in the on-site gym.
                                 </li>
                                 <li class="flex gap-3"><img src="/icons/cinema.svg" height="32" width="32"
                                         aria-hidden="true" />Movie-nights redefined in our luxurious cinema room.</li>
                                 <li class="flex gap-3"><img src="/icons/sofa.svg" height="32" width="32"
-                                        aria-hidden="true" />Connect and unwind in the common room.</li>
+                                        aria-hidden="true" />Connect and unwind in the common room with pool tables and
+                                    arcade games.</li>
                                 <li class="flex gap-3"><img src="/icons/study.svg" height="32" width="32"
                                         aria-hidden="true" />Our dedicated study areas provides the ideal space for group
                                     projects, collaborative learning and group study sessions.</li>
@@ -270,7 +272,7 @@ useHead({
 </template>
 
 <style scoped>
-#room-wrapper::before {
+#rooms::before {
     height: calc(100% - 10vw);
 }
 </style>

@@ -47,7 +47,6 @@ function changeImage(index) {
     if (mainImageIndex.value + index < 0) {
         scrollCoordinate = carousel.value.scrollLeft + width.value * images.length;
     } else if (mainImageIndex.value + index > images.length - 1) {
-        console.log("this one fired")
         scrollCoordinate = carousel.value.scrollRight + width.value * images.length;
     }
 
@@ -138,17 +137,69 @@ onMounted(() => {
                 <img src="/icons/chevron-right.svg" class="inline h-8 w-8" :aria-hidden="true" />
             </button>
         </div>
-        <section class="container mx-auto px-6 flex flex-col items-center justify-center mb-16">
-            <div class="w-full md:w-3/4">
-                <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center">About us heading</h2>
-                <p class="font-poppins text-[16px] md:text-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ratione veniam
-                    quas
-                    laboriosam sapiente numquam quidem accusamus temporibus. Dolores, libero. Sunt, dignissimos? Blanditiis
-                    dicta
-                    est, omnis fugiat magnam veritatis non nulla.</p>
+        <section class="container mx-auto px-6 mb-16 flex flex-col gap-10 justify-center items-center">
+            <div class="w-full md:w-3/4 flex flex-col gap-10 justify-center items-center">
+                <div>
+                    <h2 class="font-freight text-[36px] md:text-[42px] lg:text-[50px] text-center mb-6">Why Element The
+                        Quarter?
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">Welcome to Legacie's state-of-the-art student living
+                        community, where sustainability, modern comfort, and vibrant community converge to create an
+                        unparalleled living experience. We're not just a student accommodation option; we're a way of life
+                        that
+                        prioritises your well-being, your aspirations, and the planet.</p>
+                </div>
+                <div>
+                    <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Our Mission
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">At the heart of Element The Quarter lies a
+                        deep-rooted commitment to sustainability. Our mission is to provide you with a living space that not
+                        only nurtures your academic journey but also fosters a sense of responsibility towards the
+                        environment with low carbon smart technology promoting unrivalled sustainability.</p>
+                </div>
+                <div>
+                    <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Green Living,
+                        Redefined
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">Our dedication to sustainability is reflected in
+                        every facet of our student building. From solar panels that power our energy-efficient appliances to
+                        rainwater recycling systems that harvest rainwater for use in toilets, irrigation and laundry
+                        purposes. At Legacie, we aim to inspire sustainable habits that you can carry with you throughout
+                        your life, creating a positive impact for generations to come.</p>
+                </div>
+                <div>
+                    <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Community, Connection,
+                        Camaraderie
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">At Element The Quarter, you're not just a tenant;
+                        you're a valued member of a diverse and dynamic community. We've carefully curated communal spaces
+                        that encourage interactions, friendships, and shared experiences. From cosy common rooms for
+                        laughter-filled gatherings to study areas that fuel your academic ambitions, we're dedicated to
+                        fostering an environment where lasting connections are made.</p>
+                </div>
+                <div>
+                    <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Amenities that Elevate
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">Step into a realm of modern convenience where every
+                        amenity is designed to enhance your lifestyle. Our on-site gym ensures you stay active and healthy,
+                        our cinema room transforms movie nights into cinematic adventures, and our games room offers a
+                        welcoming space to meet old friends, or make new. Whether you're seeking physical activity,
+                        entertainment, or moments of serenity, we have you covered.</p>
+                </div>
+                <div>
+                    <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Location, Connection,
+                        Convenience
+                    </h2>
+                    <p class="font-poppins text-[16px] md:text-[20px]">Situated in the heart of the city, Element The
+                        Quarter offers unparalleled accessibility to your university buildings, city centre, and essential
+                        amenities. Embrace city life while enjoying the comfort of a home that's designed with your needs in
+                        mind. Your journey becomes smoother, and your experiences become richer when you're part of our
+                        vibrant student community.</p>
+                </div>
 
             </div>
+            <h2 class="text-center font-freight text-[24px] md:text-[30px] lg:text-[36px] italic">Welcome to the
+                future of student living - welcome to a place where you belong.</h2>
 
         </section>
     </div>

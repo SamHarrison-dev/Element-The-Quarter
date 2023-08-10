@@ -19,21 +19,15 @@
                 <div class="flex flex-col gap-3 md:pr-10">
                     <h3 class="font-freight underline underline-offset-4 text-[28px]">Explore</h3>
                     <div class="flex gap-4 flex-col">
-                        <a class="hover:underline" href="/about" aria-label="Go to About page">About</a>
-                        <a class="hover:underline" href="/faq" aria-label="Go to Frequently Asked Questions page">FAQ's</a>
+                        <a class="hover:underline" href="/about" aria-label="Go to About page">Discover</a>
+                        <a class="hover:underline" href="/#rooms" aria-label="Go to Student accomodation rooms">Rooms</a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-3 md:pr-10">
                     <h3 class="font-freight underline underline-offset-4 text-[28px]">Connect</h3>
                     <div class="flex gap-4">
                         <figure class="bg-white rounded-full p-2 hover:cursor-pointer hover:outline hover:outline-2">
-                            <a href="https://www.twitter.com" target="_blank"
-                                aria-label="Follow Element The Quarter on Twitter">
-                                <img src="/icons/twitter.svg" height="24" width="24" alt="twitter" aria-hidden="true" />
-                            </a>
-                        </figure>
-                        <figure class="bg-white rounded-full p-2 hover:cursor-pointer hover:outline hover:outline-2">
-                            <a href="https://www.instagram.com" target="_blank"
+                            <a href="https://www.instagram.com/elementquarterlegacie/" target="_blank"
                                 aria-label="Follow Element The Quarter on Instagram">
                                 <img src="/icons/instagram.svg" height="24" width="24" aria-hidden="true" alt="Instagram" />
                             </a>
