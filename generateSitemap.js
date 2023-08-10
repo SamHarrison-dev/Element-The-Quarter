@@ -5,7 +5,6 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 const routes = [
     { url: '/', changefreq: 'daily', priority: 1.0 },
     { url: '/about', changefreq: 'weekly', priority: 0.8 },
-    { url: '/faq', changefreq: 'weekly', priority: 0.7 },
     // Add more routes as needed
 ];
 
