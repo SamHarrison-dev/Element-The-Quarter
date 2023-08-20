@@ -181,9 +181,9 @@ onMounted(() => {
                     <h2 class="font-freight text-[30px] md:text-[36px] lg:text-[40px] text-left mb-4">Amenities that Elevate
                     </h2>
                     <p class="font-poppins text-[16px] md:text-[20px]">Step into a realm of modern convenience where every
-                        amenity is designed to enhance your lifestyle. Our on-site gym ensures you stay active and healthy,
-                        our cinema room transforms movie nights into cinematic adventures, and our games room offers a
-                        welcoming space to meet old friends, or make new. Whether you're seeking physical activity,
+                        amenity is designed to enhance your lifestyle. Our on-site gym ensures you stay active and healthy
+                        and our games room offers a welcoming space to meet old friends, or make new. Whether you're seeking
+                        physical activity,
                         entertainment, or moments of serenity, we have you covered.</p>
                 </div>
                 <div>

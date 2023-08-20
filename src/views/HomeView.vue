@@ -4,7 +4,7 @@ import ImageCarousel from '../components/ImageCarousel.vue'
 
 const studioImages = ['/studio/DSC04725-2.jpg', '/studio/DSC04687-2.jpg', '/studio/DSC04700.jpg', '/studio/DSC04712.jpg', '/studio/DSC04717.jpg', '/studio/DSC04742.jpg']
 const clusterImages = ['/cluster/DSC01935.jpg', '/cluster/DSC01905-2.jpg', '/cluster/DSC01922-2.jpg', '/cluster/DSC01940-2.jpg']
-const facilitiesImages = ['/facilities/BarImage.jpg', '/facilities/Cinema2.jpg', '/facilities/Gym2.jpg', '/facilities/Lounge1.jpg', '/facilities/Rooftop4.jpg', '/facilities/EvElement2.jpg']
+const facilitiesImages = ['/facilities/Rooftop4.jpg', '/facilities/Bar.jpg', '/facilities/Games.jpg', '/facilities/Reception.jpg', '/facilities/Study.jpg']
 
 useHead({
     title: 'Element The Quarter | Reserve your new luxury student accomodation in Liverpool city center',
@@ -115,7 +115,7 @@ useHead({
                                     class="underline"
                                     aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
                             <p class="uppercase">or</p>
-                            <a class="flex" href="https://www.rightmove.co.uk/properties/137836298#/?channel=STU_LET"
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/138646793#/?channel=STU_LET"
                                 aria-label="View Studio on Rightmove" target="_blank">
                                 <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
                                     now</button>
@@ -154,7 +154,7 @@ useHead({
                                     class="underline"
                                     aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
                             <p class="uppercase">or</p>
-                            <a class="flex" href="https://www.rightmove.co.uk/properties/137886077#/?channel=STU_LET"
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/138646793#/?channel=STU_LET"
                                 aria-label="View Studio on Rightmove" target="_blank">
                                 <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
                                     now</button>
@@ -177,8 +177,6 @@ useHead({
                                 <li class="flex gap-3"><img src="/icons/gym.svg" height="32" width="32"
                                         aria-hidden="true" />Stay active in the on-site gym.
                                 </li>
-                                <li class="flex gap-3"><img src="/icons/cinema.svg" height="32" width="32"
-                                        aria-hidden="true" />Movie-nights redefined in our luxurious cinema room.</li>
                                 <li class="flex gap-3"><img src="/icons/sofa.svg" height="32" width="32"
                                         aria-hidden="true" />Connect and unwind in the common room with pool tables and
                                     arcade games.</li>
@@ -193,7 +191,7 @@ useHead({
                                     class="underline"
                                     aria-label="Contact us through phone on +44(0)1512079990">01512079990</a></p>
                             <p class="uppercase">or</p>
-                            <a class="flex" href="https://www.rightmove.co.uk/properties/137836298#/?channel=STU_LET"
+                            <a class="flex" href="https://www.rightmove.co.uk/properties/138646793#/?channel=STU_LET"
                                 aria-label="View Studio on Rightmove" target="_blank">
                                 <button class="rounded-full py-3 px-5 bg-[#050A30] text-white hover:underline">Enquire
                                     now</button>
